@@ -1,0 +1,38 @@
+/*main*/
+.areaDeTrabajo {
+   margin: 1 rem;
+}
+/*botones*/
+.contenedorBotones{
+    display: flex;
+    flex-flow: wrap;
+    gap: 10px;
+    justify-content: space-around
+}
+
+button{
+    width: 14%;
+}
+.igual {
+    width: 30%;
+    display: flex;
+    place-content: center;
+}
+
+
+
+
+
+
+
+
+@media only screen and (min-width: 480px) and (max-width: 960px) {
+    
+}
+
+@media only screen and (min-width: 961px) and (max-width:1200px) {
+   
+}
+
+@media only screen and (min-width: 1201px) {
+}
