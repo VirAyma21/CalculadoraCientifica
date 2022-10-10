@@ -2,6 +2,9 @@
 .areaDeTrabajo {
    margin: 1 rem;
 }
+.contenedor{
+    min-width: 350px;
+}
 /*botones*/
 .contenedorBotones{
     display: flex;
@@ -10,15 +13,17 @@
     justify-content: space-around
 }
 
-button{
-    width: 14%;
+#contenedorResultado{
+    width: 100%;
 }
-.igual {
+#igual {
     width: 30%;
     display: flex;
     place-content: center;
 }
-
+.boton {
+    width: 14%;
+}
 
 
 
@@ -30,8 +35,13 @@ button{
     
 }
 
-@media only screen and (min-width: 961px) and (max-width:1200px) {
-   
+@media only screen and (min-width: 780px) and (max-width:1200px) {
+    .col-md-4{
+       columns: md-6;
+    }
+    .contenedor{
+        min-width: 422px;
+    }
 }
 
 @media only screen and (min-width: 1201px) {

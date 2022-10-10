@@ -14,58 +14,64 @@
                 <div class="col-md-4">
                     <div class="contenedor alert alert-warning" role="alert">
                         <h1>Calculadora <img src="images/calculator.png" alt=""></h1>
-                        <div class="contenedoResultado alert alert-info" role="alert">
-                            <h3>Tu resultado...</h3>
-                        </div>
-                        <div class="contenedorBotones"> 
-                                <button class="btn btn-primary">(</button>
-                                <button class="btn btn-primary">)</button>
-                                <button class="btn btn-primary">x!</button>
-                                <button class="btn btn-primary">×²</button>
-                                <button class="btn btn-primary">√</button>
-                                <button class="btn btn-primary">ⁿ√</button>
+                    
+                        
+                            <form id="calculadora" class="" name="calculadora">
+                                <!-- mostrar resultado-->
+                            <input id="contenedorResultado" class="alert alert-info" type="textfield" name="pant" value="" autocomplete="off" readonly>
+                            <input id="valorDos" class="alert alert-info" type="hidden" name="pantDos" value="" autocomplete="off" readonly>
+                                <!--botones-->
+                                    <div class="contenedorBotones">
+                                <input type="button" id="par1" value="(" class="btn btn-success boton" onclick="pantalla('(')">
+                                <input type="button" id="" value=")" class="btn btn-success boton" onclick="pantalla(')')">
+                                <input type="button" id="x!" value="x!" class="btn btn-primary boton">
+                                <input type="button" id="x2" value="×²" class="btn btn-primary boton" onclick="potencia()">
+                                <input type="button" id="raiz" value="√" class="btn btn-primary boton" onclick="raizCuadrada()">
+                                <input type="button" id="raizN" value="ⁿ√" class="btn btn-primary boton" onclick="funcRaizN('ⁿ√')">
                           
                            
-                                <button class="btn btn-primary">sin</button>
-                                <button class="btn btn-primary">cos</button>
-                                <button class="btn btn-primary">tg</button>
-                                <button class="btn btn-primary">×³</button>
-                                <button class="btn btn-primary">³√</button>
-                                <button class="btn btn-primary">×ⁿ</button>
+                                <input type="button" id="sin" value="sin" class="btn btn-primary boton" onclick="funcionSin()">
+                                <input type="button" id="cos" value="cos" class="btn btn-primary boton" onclick="funcionCos()">
+                                <input type="button" id="tg"  value="tg" class="btn btn-primary boton" onclick="funciontg()">
+                                <input id="x3" type="button" value="×³" class="btn btn-primary boton" onclick="potencia3()">
+                                <input  type="button" id="raiz3" value="³√" class="btn btn-primary boton" onclick="raizCubica()">
+                                <input type="button" id="xn" value="×ⁿ" class="btn btn-primary boton" onclick="potenciaN('×ⁿ')">
                          
-                                <button class="btn btn-success">1</button>
-                                <button class="btn btn-success">2</button>
-                                <button class="btn btn-success">3</button>
-                                <button class="btn btn-primary">/</button>
-                                <button class="btn btn-primary">%</button>
-                                <button class="btn btn-primary">In</button>
+                                <input type="button" id="uno" value="1" class="btn btn-success boton" onclick="pantalla('1')">
+                                <input type="button" id="dos" value="2" class="btn btn-success boton" onclick="pantalla('2')">
+                                <input type="button" id="tres" value="3" class="btn btn-success boton" onclick="pantalla('3')">
+                                <input type="button" id="divi" value="/" class="btn btn-success boton" onclick="pantalla('/')">
+                                <input type="button" id="porcentaje" value="%" class="btn btn-primary boton" onclick="FuncPorcentaje('%')">
+                                <input type="button" id="in" value="In" class="btn btn-primary boton" onclick="funcionIn()">
                        
-                                <button class="btn btn-success">4</button>
-                                <button class="btn btn-success">5</button>
-                                <button class="btn btn-success">6</button>
-                                <button class="btn btn-primary">*</button>
-                                <button class="btn btn-primary">log</button>
-                                <button class="btn btn-primary">e</button>
+                                <input type="button" id="cuatro" value="4" class="btn btn-success boton" onclick="pantalla('4')">
+                                <input type="button" id="cinco" value="5" class="btn btn-success boton" onclick="pantalla('5')">
+                                <input type="button" id="seis" value="6" class="btn btn-success boton" onclick="pantalla('6')">
+                                <input type="button" id="multi" value="*" class="btn btn-success boton" onclick="pantalla('*')">
+                                <input type="button" id="log" value="log" class="btn btn-primary boton" onclick="funcionlog()">
+                                <input type="button" id="e" value="e" class="btn btn-primary boton" onclick="funcionE()">
                            
-                                <button class="btn btn-success">7</button>
-                                <button class="btn btn-success">8</button>
-                                <button class="btn btn-success">9</button>
-                                <button class="btn btn-primary">-</button>
-                                <button class="btn btn-primary">AC</button>
+                                <input type="button" id="siete" value="7" class="btn btn-success boton" onclick="pantalla('7')">
+                                <input type="button" id="ocho" value="8" class="btn btn-success boton" onclick="pantalla('8')">
+                                <input type="button" id="nueve" value="9" class="btn btn-success boton" onclick="pantalla('9')">
+                                <input type="button" id="resta" value="-" class="btn btn-success boton" onclick="pantalla('-')">
+                                <input type="button" id="ac" value="AC" class="btn btn-primary boton" onclick="funcionAc()">
                                 
                            
-                                <button class="btn btn-primary">MR</button>
-                                <button class="btn btn-primary">.</button>
-                                <button class="btn btn-success">0</button>
-                                <button class="btn btn-primary">∏</button>
-                                <button class="btn btn-primary">+</button>
-                                <button class="igual btn btn-danger">=</button>
-                          
-                        </div>
+                                <input type="button" id="mr"  value="MR"class="btn btn-primary boton" onclick="funcionMr()">
+                                <input id="punto"  value="." class="btn btn-primary boton" onclick="pantalla('.')">
+                                <input type="button" id="cero" value="0" class="btn btn-success boton" onclick="pantalla('0')">
+                                <input type="button" id="pi" value="π" class="btn btn-primary boton" onclick="valorPi('3.141592653589793')">
+                                <input type="button" id="suma" value="+" class="btn btn-success boton" onclick="pantalla('+')">
+                                <input type="button" id="igual"value="="  class="btn btn-success" onclick="Calcular()" >
+                            </div>
+                            </form>
                         
+                           <!-- onclick="document.calculadora.pant.value=eval(document.calculadora.pant.value)"-->
                     </div>
                 </div>
             </div>
     </main>
+    <script src="js/caluladora.js"></script>
 </body>
 </html>
